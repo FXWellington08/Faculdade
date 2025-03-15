@@ -1,0 +1,56 @@
+//Exercício sem return
+import 'dart:io';
+ 
+void main() {
+opcaoOperacao();
+print("")
+}
+ 
+void opcaoOperacao(){
+  print("Escolha a operação válida: 1 - Fatorial; 2 - Quadrado do número ; 3 - sair");
+  String opcao = stdin.readLineSync()!;
+    switch(opcao){
+     
+      case ("1"):
+      fatorial();
+      break;
+     
+      case("2"):
+      quadrado();
+      break;
+     
+      case("3"):
+      print("Encerrando o programa");
+      break;
+ 
+      default:
+      print("Valor inválido");
+ 
+    }
+}
+ 
+void fatorial(){
+  print("\nInsira o número: ");
+  int numero = int.parse(stdin.readLineSync()!);
+  int resultado = 1;
+  int i = 1;
+  
+  do{
+      resultado = resultado * i;
+      i++;
+    }while( i <= numero);
+  print("O resultado do fatorial do $numero é $resultado");
+  }
+  
+
+ 
+ 
+void quadrado(){
+  print("\nInsira o número: ");
+  int numero = int.parse(stdin.readLineSync()!);
+  int resultado;
+ 
+  resultado = numero * numero;
+ 
+  print("O resultado do quadrado do $numero é $resultado");
+}
