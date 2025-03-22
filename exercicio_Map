@@ -1,0 +1,27 @@
+import 'dart:io';
+void main(){
+  String nome;
+  double nota;
+  int quantidade;
+  int i = 1;
+ 
+  print("Quantos alunos tem a turma?: ");
+  quantidade = int.parse(stdin.readLineSync()!);
+ 
+  Map<String,double> alunos= {};
+  do {
+   
+    print("\nNome do aluno");
+    nome = stdin.readLineSync()!;
+    print("\nnota: ");
+    nota = double.parse(stdin.readLineSync()!);
+ 
+    alunos[nome] = nota;
+ 
+    i++;
+ 
+  } while (i <= quantidade);
+ 
+  print(alunos);
+ 
+}
